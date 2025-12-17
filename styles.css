@@ -1,0 +1,340 @@
+:root{
+  --brand-black: #15151c;         /* Soft premium charcoal */
+  --brand-blue: #6363fc;         /* Your chosen blue */
+  --brand-light: #8b8bff;        /* Soft highlight blue */
+  --accent: #6363fc;             /* CTA + focus colour */
+  --body-bg: #181820;            /* Premium soft grey background */
+  --card: #1f1f2a;               /* Raised card grey */
+  --border: #2b2b38;             /* Subtle section border */
+  --text: #f2f2f7;               /* Bright readable white */
+  --muted: #b8b8c7;              /* Soft muted text */
+  --shadow: 0 10px 28px rgba(0,0,0,0.35);
+  --radius: 14px;
+  --max-width: 1180px;
+}
+
+/* ================= GLOBAL RESET ================= */
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--text);
+  background:var(--body-bg);
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+  width:94%;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:22px;
+}
+
+/* ================= TOP TRUST BAR (KEEPING YOUR GOLD/ORANGE) ================= */
+
+.top-trust{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(90deg,var(--accent),#ffb700);
+  color:#000;
+  font-weight:900;
+  padding:10px 16px;
+  border-radius:999px;
+  box-shadow:var(--shadow);
+  margin:16px auto 10px auto;
+  max-width:980px;
+  text-align:center;
+  font-size:0.95rem;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:10px 0;
+}
+
+.header .brand{
+  font-weight:900;
+  font-size:1rem;
+  color:#ffffff;
+  letter-spacing:-0.2px;
+}
+
+.header .phone{
+  font-weight:900;
+  color:var(--brand-blue);
+  font-size:0.95rem;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  position:relative;
+  background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.3));
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin:16px 0;
+  box-shadow:var(--shadow);
+  display:block;
+}
+
+.hero .inner{
+  padding:32px 22px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:1.65rem;
+  margin:0;
+  color:#ffffff;
+  line-height:1.05;
+  font-weight:900;
+}
+
+.hero p.lead{
+  margin:0.4rem 0;
+  font-weight:700;
+  color:#f0f0ff;
+}
+
+.hero .cta-row{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:8px;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:900;
+  box-shadow:0 6px 16px rgba(0,0,0,0.35);
+  transition:transform .18s ease, filter .18s ease;
+}
+
+.btn-primary{
+  background:var(--brand-blue);
+  color:#fff;
+}
+
+.btn-phone{
+  background:linear-gradient(90deg,#ffb700,var(--accent));
+  color:#000;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  filter:brightness(1.05);
+}
+
+/* ================= TRUST & RATINGS ================= */
+
+.trust-strip{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+  margin:18px 0;
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+
+.trust-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:8px 12px;
+}
+
+.trust-item strong{
+  display:block;
+  color:#ffffff;
+  font-weight:900;
+}
+
+.trust-stars{
+  color:#ffcc00;
+  font-weight:900;
+  font-size:1.2rem;
+}
+
+/* ================= TWO COLUMN SECTIONS ================= */
+
+.row{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+}
+
+@media(min-width:820px){
+  .row{grid-template-columns:1fr 420px}
+}
+
+/* ================= CONTENT CARD ================= */
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.kicker{
+  color:var(--brand-blue);
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.h2{
+  font-size:1.25rem;
+  font-weight:900;
+  margin:6px 0 12px;
+  color:#ffffff;
+}
+
+.lead-p{
+  font-size:1rem;
+  line-height:1.65;
+  color:#f0f0f6;
+}
+
+/* ================= FEATURES GRID ================= */
+
+.features{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:14px;
+}
+
+@media(min-width:640px){
+  .features{grid-template-columns:repeat(2,1fr)}
+}
+
+.feature{
+  background:#242433;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  color:#ffffff;
+}
+
+/* ================= IMAGE PROOF GALLERY ================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+@media(min-width:640px){
+  .gallery{grid-template-columns:repeat(3,1fr)}
+}
+
+.gallery img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+
+/* ================= FINAL CTA ================= */
+
+.final-cta{
+  margin:22px 0;
+  padding:26px;
+  border-radius:14px;
+  background:linear-gradient(90deg,#202030,#2a2a3d);
+  box-shadow:var(--shadow);
+  text-align:center;
+  border:1px solid var(--border);
+}
+
+.final-cta h2{
+  margin:0 0 12px;
+  font-size:1.2rem;
+  color:#ffffff;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  padding:26px;
+  text-align:center;
+  font-size:0.95rem;
+  color:#bfc0d0;
+  border-top:1px solid var(--border);
+  margin-top:40px;
+}
+
+/* ================= TEXT HELPERS ================= */
+
+.meta{
+  font-size:0.95rem;
+  color:var(--muted);
+}
+
+.small{
+  font-size:0.92rem;
+  color:var(--muted);
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+a:focus,button:focus{
+  outline:3px solid rgba(99,99,252,0.4);
+  outline-offset:3px;
+}
+
+/* ================= UTILITIES ================= */
+
+.center{text-align:center}
+.row-gap{margin-top:14px}
+.list-plain{padding-left:20px}
+
+/* ================= LONG COPY ================= */
+
+.long-copy p{
+  margin:0 0 14px 0;
+  line-height:1.75;
+  color:#e9e9f4;
+}
+
+.long-copy h3{
+  margin-top:22px;
+  margin-bottom:10px;
+  color:var(--brand-blue);
+}
+
+/* ================= MOBILE TWEAKS ================= */
+
+@media(max-width:420px){
+  .hero h1{font-size:1.35rem}
+  .hero p.lead{font-size:0.95rem}
+  .gallery img{height:130px}
+}
