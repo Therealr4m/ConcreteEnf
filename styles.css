@@ -419,57 +419,73 @@ a:focus,button:focus{
 
 
 
-/* HERO WITH LOCAL HIGH STREET IMAGE */
+
+
+
+
+
+/* Dark luxury overlay for readability + authority */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.55) 60%,
+    rgba(0,0,0,0.65) 100%
+  );
+}
+
+/* Content sits above image */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 28px 18px;
+}
+
+/* Mobile-first height control */
+.hero-image {
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+  .hero-image {
+    min-height: 420px;
+  }
+
+  .hero-overlay {
+    padding: 40px 32px;
+  }
+}
+
+
+
+
+
+/* ================= HERO IMAGE CORE (RESTORED) ================= */
+
+/* Hero image container */
 .hero-image {
   position: relative;
   overflow: hidden;
   padding: 0;
 }
 
+/* Background image wrapper */
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
+/* Actual image */
 .hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.65);
 }
-
-/* Content stays crisp above image */
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 28px 22px;
-  text-align: left;
-}
-
-/* Mobile-first spacing */
-.hero-content h1 {
-  margin-bottom: 10px;
-}
-
-.hero-content .lead {
-  max-width: 520px;
-}
-
-/* Desktop refinement */
-@media (min-width: 768px) {
-  .hero-content {
-    padding: 46px 48px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-}
-
-
-
-
-
-
