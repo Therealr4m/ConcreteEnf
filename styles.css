@@ -489,3 +489,94 @@ a:focus,button:focus{
   object-fit: cover;
   object-position: center;
 }
+
+
+
+
+
+
+/* ================= SERVICE PAGE PREMIUM ENHANCEMENTS ================= */
+
+/* Subtle section separation glow */
+.card.long-copy {
+  position: relative;
+}
+
+.card.long-copy::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99,99,252,0.35),
+    transparent
+  );
+}
+
+/* Headings feel more authoritative */
+.long-copy h2.h2 {
+  letter-spacing: -0.4px;
+}
+
+/* Lists feel more deliberate and premium */
+.long-copy ul.list-plain li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+  position: relative;
+}
+
+.long-copy ul.list-plain li::marker {
+  color: var(--brand-blue);
+}
+
+/* CTA blocks stand out without being aggressive */
+.long-copy .btn-phone {
+  margin-top: 8px;
+}
+
+/* Pull-quote style emphasis for key value lines */
+.long-copy p.small {
+  background: rgba(99,99,252,0.06);
+  padding: 12px 14px;
+  border-left: 3px solid var(--brand-blue);
+  border-radius: 8px;
+}
+
+/* Mobile breathing room */
+@media (max-width: 480px) {
+  .card.long-copy {
+    padding: 20px 18px;
+  }
+}
+
+
+
+
+
+
+
+/* ================= LOCAL MAP ================= */
+
+.map-wrap {
+  margin-top: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .map-wrap iframe {
+    height: 320px;
+  }
+}
