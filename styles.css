@@ -640,6 +640,38 @@ a:focus,button:focus{
 }
 
 
+/* === HERO IMAGE EDGE FIX === */
+.hero-image {
+  padding: 0;
+  background: none;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.hero-bg img {
+  object-position: center 65%;
+}
+
+
+@media (max-width: 480px) {
+  .hero-image {
+    min-height: 380px;
+  }
+}
+
+
+
 
 
 
