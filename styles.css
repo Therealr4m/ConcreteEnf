@@ -422,11 +422,11 @@ a:focus,button:focus{
 
 
 
-  .hero-overlay {
-    padding: 40px 32px;
-  }
 
 
+
+
+/* deleted a hero overlay here */
 
 
 
@@ -639,12 +639,19 @@ a:focus,button:focus{
   );
 }
 
-/* Text layer */
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 28px 18px;
-}
+
+
+/* deleted a hero overlay section */
+
+/* Text....
+
+
+
+
+
+
+
+
 
 /* Height control */
 .hero-image {
