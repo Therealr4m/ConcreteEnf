@@ -40,24 +40,37 @@ a{color:inherit;text-decoration:none}
 
 .top-trust{
   display:flex;
-  gap:10px;                 /* thinner */
+  gap: 8px;px;                 /* thinner */
   align-items:center;
   justify-content:center;
+
 
   background:linear-gradient(90deg,var(--accent),#ffb700);
   color:#000;
   font-weight:900;
 
-  padding:8px 14px;         /* thinner height */
-  border-radius:8px;        /* straight, professional */
+
+  padding:4px 6px;         /* thinner height */
+  border-radius:8px;   
+  border: 3px solid #5242df;     /* straight, professional */
   box-shadow:var(--shadow);
 
-  margin:16px auto 10px auto;
+  margin:14px auto 10px auto;
   max-width:92%;            /* space left & right */
   text-align:center;
-  font-size:0.9rem;
+  font-size:0.85rem;
 }
 
+
+
+@media (max-width: 600px) {
+  .top-trust{
+    padding:5px 10px;
+    gap:6px;
+    font-size:0.8rem;
+    max-width:94%; /* ensures edge spacing on homepage + service pages */
+  }
+}
 
 
 /* ================= HEADER ================= */
@@ -177,7 +190,7 @@ a{color:inherit;text-decoration:none}
 
 .trust-item strong{
   display:block;
-  color:#ffffff;
+  color:#000000;
   font-weight:900;
 }
 
@@ -308,6 +321,7 @@ a{color:inherit;text-decoration:none}
 .small{
   font-size:0.92rem;
   color:var(--muted);
+  color: #414141;
 }
 
 /* ================= ACCESSIBILITY ================= */
