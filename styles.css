@@ -750,3 +750,32 @@ a:focus,button:focus{
     padding-right: 12px;
   }
 }
+
+
+
+/* ================= TRUST BAR SHAPE FIX ================= */
+
+.top-trust {
+  border-radius: 8px; /* straight, professional */
+}
+
+/* ================= MOBILE EDGE FIX (HOMEPAGE & GLOBAL) ================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-trust {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .trust-item {
+    padding: 6px 8px;
+  }
+}
