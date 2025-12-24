@@ -54,6 +54,15 @@ a{color:inherit;text-decoration:none}
   font-size:0.95rem;
 }
 
+
+/* ================= TRUST BAR SHAPE FIX ================= */
+
+.top-trust {
+  border-radius: 8px; /* straight, professional */
+}
+
+
+
 /* ================= HEADER ================= */
 
 .header{
@@ -674,6 +683,23 @@ a:focus,button:focus{
 
 
 
+/* ================= MOBILE STRUCTURE ALIGNMENT ================= */
+/* Makes homepage match service page width & spacing */
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* restore breathing room inside cards & hero content */
+  .card,
+  .hero-overlay,
+  .hero .inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
 
 
 /* =========================================
