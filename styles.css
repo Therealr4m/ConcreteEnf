@@ -300,6 +300,25 @@ a{color:inherit;text-decoration:none}
   color:#ffffff;
 }
 
+
+
+/* FINAL CTA BUTTON ROW – FIX SPACING */
+
+.final-cta-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 14px;          /* clean, intentional spacing */
+  margin-top: 16px;
+  flex-wrap: wrap;    /* mobile-safe */
+}
+
+
+
+
+
+
+
+
 /* ================= FOOTER ================= */
 
 .footer{
@@ -321,7 +340,7 @@ a{color:inherit;text-decoration:none}
 .small{
   font-size:0.92rem;
   color:var(--muted);
-  color: #414141;
+  color: #1707f0;
 }
 
 /* ================= ACCESSIBILITY ================= */
@@ -519,6 +538,25 @@ a:focus,button:focus{
   display: block;
 }
 
+/* ================= MOBILE MAP ZOOM-OUT FIX ================= */
+/* Shows more of the service area map on mobile */
+
+@media (max-width: 600px) {
+  .map-wrap {
+    height: 200px;               /* shorter = zoomed-out feel */
+  }
+
+  .map-wrap img {
+    object-fit: contain;         /* show full map, no crop */
+    object-position: center;     /* keep Enfield centred */
+    background: #000;            /* clean edges if needed */
+  }
+}
+
+
+
+
+
 /* Desktop refinement */
 @media (min-width: 768px) {
   .map-wrap {
@@ -612,12 +650,6 @@ a:focus,button:focus{
 
 
 
-
-
-
-
-
-
 .hero-bg img {
   width: 100%;
   height: 100%;
@@ -625,13 +657,6 @@ a:focus,button:focus{
   object-position: center 60%;
   transform: scale(1);
 }
-
-
-
-
-
-
-
 
 
 /* Overlay gradient */
@@ -645,17 +670,6 @@ a:focus,button:focus{
     rgba(0,0,0,0.6)
   );
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Height control */
@@ -678,15 +692,6 @@ a:focus,button:focus{
   display: flex;
   align-items: flex-end;
 }
-
-
-
-
-
-
-
-
-
 
 /* ================= MOBILE STRUCTURE ALIGNMENT ================= */
 /* Makes homepage match service page width & spacing */
@@ -714,17 +719,6 @@ a:focus,button:focus{
     font-size: 0.85rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* =========================================
