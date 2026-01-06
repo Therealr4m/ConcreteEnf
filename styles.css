@@ -1,17 +1,27 @@
 :root{
-  --brand-black: #15151c;         /* Soft premium charcoal */
-  --brand-blue: #6363fc;         /* Your chosen blue */
-  --brand-light: #8b8bff;        /* Soft highlight blue */
-  --accent: #6363fc;             /* CTA + focus colour */
-  --body-bg: #181820;            /* Premium soft grey background */
-  --card: #1f1f2a;               /* Raised card grey */
-  --border: #2b2b38;             /* Subtle section border */
-  --text: #f2f2f7;               /* Bright readable white */
-  --muted: #b8b8c7;              /* Soft muted text */
-  --shadow: 0 10px 28px rgba(0,0,0,0.35);
+  /* Core brand */
+  --brand-black: #1e1e1e;          /* Soft charcoal for headings */
+  --brand-blue: #1f5cff;           /* Trustworthy service blue */
+  --brand-light: #e9efff;          /* Light blue wash */
+  --accent: #ffb700;               /* Warm conversion accent (calls / CTAs) */
+
+  /* Backgrounds */
+  --body-bg: #f6f8fb;               /* Open, clean page background */
+  --card: #ffffff;                  /* Clean white cards */
+  --border: #e4e7ef;                /* Subtle structural borders */
+
+  /* Text */
+  --text: #1e1e1e;                  /* High-contrast readable text */
+  --muted: #6b7280;                 /* Soft grey helper text */
+
+  /* Effects */
+  --shadow: 0 10px 24px rgba(0,0,0,0.08); /* Light WP-style depth */
   --radius: 14px;
+
+  /* Layout (unchanged) */
   --max-width: 1180px;
 }
+
 
 /* ================= GLOBAL RESET ================= */
 
@@ -40,7 +50,7 @@ a{color:inherit;text-decoration:none}
 
 .top-trust{
   display:flex;
-  gap: 8px;px;                 /* thinner */
+  gap: 8px;                 /* thinner */
   align-items:center;
   justify-content:center;
 
@@ -51,7 +61,7 @@ a{color:inherit;text-decoration:none}
 
 
   padding:4px 6px;         /* thinner height */
-  border-radius:8px;   
+  border-radius:8px;  
   border: 3px solid #5242df;     /* straight, professional */
   box-shadow:var(--shadow);
 
@@ -96,27 +106,8 @@ a{color:inherit;text-decoration:none}
   font-size:0.95rem;
 }
 
-/* ================= HERO ================= */
 
-.hero{
-  position:relative;
-  background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.3));
-  border-radius:var(--radius);
-  overflow:hidden;
-  margin:16px 0;
-  box-shadow:var(--shadow);
-  display:block;
-}
 
-.hero .inner{
-  padding:32px 22px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  align-items:center;
-  text-align:center;
-  color:#fff;
-}
 
 .hero h1{
   font-size:1.65rem;
@@ -315,10 +306,6 @@ a{color:inherit;text-decoration:none}
 
 
 
-
-
-
-
 /* ================= FOOTER ================= */
 
 .footer{
@@ -340,13 +327,12 @@ a{color:inherit;text-decoration:none}
 .small{
   font-size:0.92rem;
   color:var(--muted);
-  color: #1707f0;
 }
 
 /* ================= ACCESSIBILITY ================= */
 
 a:focus,button:focus{
-  outline:3px solid rgba(99,99,252,0.4);
+  outline:3px solid #51515766;
   outline-offset:3px;
 }
 
@@ -361,7 +347,7 @@ a:focus,button:focus{
 .long-copy p{
   margin:0 0 14px 0;
   line-height:1.75;
-  color:#e9e9f4;
+  color:#000000;
 }
 
 .long-copy h3{
@@ -377,7 +363,6 @@ a:focus,button:focus{
   .hero p.lead{font-size:0.95rem}
   .gallery img{height:130px}
 }
-
 
 
 
@@ -401,7 +386,7 @@ a:focus,button:focus{
   text-align: left;
   padding: 22px 20px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff, #f8fbff);
+  background: linear-gradient(135deg, #b4b3b3, #bdbcbc);
   border: 2px solid var(--brand-blue);
   text-decoration: none;
   color: var(--brand-blue);
@@ -415,7 +400,7 @@ a:focus,button:focus{
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(0,0,0,0.12);
   background: var(--brand-blue);
-  color: #ffffff;
+  color: #000000;
 }
 
 /* Top label */
@@ -449,35 +434,6 @@ a:focus,button:focus{
   font-size: 0.95rem;
 }
 
-/* Desktop enhancement */
-@media (min-width: 768px) {
-  .next-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-
-/* ================= SERVICE PAGE PREMIUM ENHANCEMENTS ================= */
-
-/* Subtle section separation glow */
-.card.long-copy {
-  position: relative;
-}
-
-.card.long-copy::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 12%;
-  width: 76%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(99,99,252,0.35),
-    transparent
-  );
-}
 
 /* Headings feel more authoritative */
 .long-copy h2.h2 {
@@ -513,35 +469,35 @@ a:focus,button:focus{
 
 
 
-
-
-
-
-
-/* ================= SERVICE PAGE IMAGE (PROOF BLEND) ================= */
+/* ================= SERVICE IMAGE (CLEAN + INTEGRATED) ================= */
 
 .service-image {
-  margin: 18px auto 22px;
-  max-width: 900px;
+  margin: 18px 0;
 }
 
 .service-image img {
   width: 100%;
-  height: auto;
   display: block;
   border-radius: 12px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  box-shadow: var(--shadow);
 }
 
-/* Caption reinforces quality without distracting */
 .service-image .image-caption {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.9rem;
+  margin-top: 10px;
+  font-size: 0.85rem;
   color: var(--muted);
   text-align: center;
-  font-weight: 600;
+  line-height: 1.4;
 }
+
+
+
+
+
+
+
+
+
 
 /* Subtle blend into content (trust > hype) */
 .proof-blend {
@@ -566,36 +522,12 @@ a:focus,button:focus{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Mobile breathing room */
 @media (max-width: 480px) {
   .card.long-copy {
     padding: 20px 18px;
   }
 }
-
 
 
 /* ================= STATIC MAP STYLING ================= */
@@ -634,10 +566,6 @@ a:focus,button:focus{
   }
 }
 
-
-
-
-
 /* Desktop refinement */
 @media (min-width: 768px) {
   .map-wrap {
@@ -646,25 +574,11 @@ a:focus,button:focus{
 }
 
 
-/* ================= FEATURED SERVICE OVERVIEW ================= */
-
-.card.long-copy {
-  position: relative;
-  background: linear-gradient(
-    135deg,
-    rgba(16, 41, 67, 0.04),
-    rgba(16, 41, 67, 0.01)
-  );
-  border-left: 6px solid var(--brand-blue);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-  padding: clamp(22px, 4vw, 34px);
-}
-
 /* Make the kicker feel like a badge */
 .card.long-copy .kicker {
   display: inline-block;
   background: var(--brand-blue);
-  color: #fff;
+  color: #000000;
   padding: 6px 12px;
   border-radius: 999px;
   font-weight: 600;
@@ -713,85 +627,6 @@ a:focus,button:focus{
 }
 
 
-
-/* HERO IMAGE CLEANUP */
-.hero-image {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  border-radius: var(--radius);
-}
-
-/* Background wrapper */
-.hero-bg {
-  position: absolute;
-  inset: -1px; /* removes thin black gaps */
-  z-index: 1;
-}
-
-
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 60%;
-  transform: scale(1);
-}
-
-
-/* Overlay gradient */
-.hero-bg::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.6)
-  );
-}
-
-
-/* Height control */
-.hero-image {
-  min-height: 360px;
-}
-
-@media (min-width: 768px) {
-  .hero-image {
-    min-height: 440px;
-  }
-  .hero-bg img {
-    transform: scale(0.9);
-  }
-}
-
-
-
-.hero-image {
-  display: flex;
-  align-items: flex-end;
-}
-
-/* ================= MOBILE STRUCTURE ALIGNMENT ================= */
-/* Makes homepage match service page width & spacing */
-
-@media (max-width: 600px) {
-
-  .container {
-    width: 100%;
-    padding: 0;
-  }
-
-  /* restore breathing room inside cards & hero content */
-  .card,
-  .hero-overlay,
-  .hero .inner {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   /* ================= TRUST BAR MOBILE SPACING ================= */
   .top-trust {
     max-width: 94%;     /* consistent left/right gap */
@@ -799,58 +634,7 @@ a:focus,button:focus{
     gap: 8px;
     font-size: 0.85rem;
   }
-}
-
-
-/* =========================================
-   HERO IMAGE – FINAL GAP FIX (GLOBAL)
-   Safe override – no visual redesign
-========================================= */
-
-/* Remove card padding ONLY when used as a hero */
-.hero-image.card {
-  padding: 0;
-}
-
-/* Ensure hero image fills entire container */
-.hero-image {
-  display: flex;
-  align-items: stretch;
-}
-
-/* Background image fills fully */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-/* Image always fills – no black gaps */
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transform: none;
-}
-
-/* Overlay content handles spacing */
-.hero-overlay,
-.hero .inner.hero-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 32px 22px;
-}
-
-/* Desktop spacing refinement */
-@media (min-width: 768px) {
-  .hero-overlay,
-  .hero .inner.hero-overlay {
-    padding: 40px 32px;
-  }
-}
-
-
+    
 
 /* ================= LOCAL AREA IMAGE (ENFIELD TRUST ANCHOR) ================= */
 
@@ -870,4 +654,81 @@ a:focus,button:focus{
   color: var(--muted);
   opacity: 0.9;
 }
+
+
+@media (max-width: 600px)    
+
+  .card{
+    padding-left: 18px;
+    padding-right: 18px;
+  }  
+
+/* ================= HERO (SINGLE SOURCE OF TRUTH) ================= */
+
+.hero {
+  position: relative;
+  min-height: 360px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.3)
+  );
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 440px;
+  }
+}
+
+/* Remove card padding ONLY when used as hero */
+.hero-image.card {
+  padding: 0;
+}
+
+/* Background image wrapper */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Image fills container — stable */
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero .inner,
+  .hero-overlay {
+    padding: 40px 32px;
+  }
+}
+
+
+
+
+
+
+
 
