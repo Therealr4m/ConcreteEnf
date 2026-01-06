@@ -1,730 +1,516 @@
+/* =====================================================
+   CORE THEME — PREMIUM LOCAL SERVICE
+===================================================== */
+
 :root{
-  /* Core brand */
-  --brand-black: #1e1e1e;          /* Soft charcoal for headings */
-  --brand-blue: #1f5cff;           /* Trustworthy service blue */
-  --brand-light: #e9efff;          /* Light blue wash */
-  --accent: #ffb700;               /* Warm conversion accent (calls / CTAs) */
+  --brand-black:#1e1e1e;
+  --brand-blue:#1f5cff;
+  --brand-light:#5973b9;
+  --accent:#ffb700;
 
-  /* Backgrounds */
-  --body-bg: #f6f8fb;               /* Open, clean page background */
-  --card: #ffffff;                  /* Clean white cards */
-  --border: #e4e7ef;                /* Subtle structural borders */
+  --bg:#fffb00;
+  --card:#cecece;
+  --border:#000000;
 
-  /* Text */
-  --text: #1e1e1e;                  /* High-contrast readable text */
-  --muted: #6b7280;                 /* Soft grey helper text */
+  --text:#1e1e1e;
+  --muted:#000000;
 
-  /* Effects */
-  --shadow: 0 10px 24px rgba(0,0,0,0.08); /* Light WP-style depth */
-  --radius: 14px;
+  --radius:14px;
+  --radius-lg:20px;
 
-  /* Layout (unchanged) */
-  --max-width: 1180px;
+  --shadow-sm:0 6px 16px rgba(0,0,0,.06);
+  --shadow-md:0 16px 36px rgba(0,0,0,.12);
+
+  --max:1180px;
 }
 
-
-/* ================= GLOBAL RESET ================= */
+/* =====================================================
+   RESET
+===================================================== */
 
 *{box-sizing:border-box}
+
 html,body{
   margin:0;
   padding:0;
-  height:100%;
-  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:var(--bg);
   color:var(--text);
-  background:var(--body-bg);
-  -webkit-font-smoothing:antialiased;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  line-height:1.7;
 }
 
-a{color:inherit;text-decoration:none}
+img{width:100%;display:block}
+a{text-decoration:none;color:inherit}
 
-.container{
-  width:94%;
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:22px;
+/* =====================================================
+   CONTAINERS
+===================================================== */
+
+.container,
+.inner{
+  width:92%;
+  max-width:var(--max);
+  margin-inline:auto;
 }
 
+section{margin-bottom:64px}
 
-/* ================= TOP TRUST BAR ================= */
-
-.top-trust{
-  display:flex;
-  gap: 8px;                 /* thinner */
-  align-items:center;
-  justify-content:center;
-
-
-  background:linear-gradient(90deg,var(--accent),#ffb700);
-  color:#000;
-  font-weight:900;
-
-
-  padding:4px 6px;         /* thinner height */
-  border-radius:8px;  
-  border: 3px solid #5242df;     /* straight, professional */
-  box-shadow:var(--shadow);
-
-  margin:14px auto 10px auto;
-  max-width:92%;            /* space left & right */
-  text-align:center;
-  font-size:0.85rem;
-}
-
-
-
-@media (max-width: 600px) {
-  .top-trust{
-    padding:5px 10px;
-    gap:6px;
-    font-size:0.8rem;
-    max-width:94%; /* ensures edge spacing on homepage + service pages */
-  }
-}
-
-
-/* ================= HEADER ================= */
+/* =====================================================
+   NAVIGATION — CLEAN, TRUSTED
+===================================================== */
 
 .header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:12px;
-  padding:10px 0;
+  padding:14px 0;
 }
 
-.header .brand{
-  font-weight:900;
-  font-size:1rem;
-  color:#1f5cff;
-  letter-spacing:-0.2px;
-}
-
-.header .phone{
+.brand{
   font-weight:900;
   color:var(--brand-blue);
-  font-size:0.95rem;
+  font-size:1.05rem;
 }
 
-
-.hero h1{
-  font-size:1.65rem;
-  margin:0;
-  color:#f1ff75;
-  text-shadow: 2px 2px 3px #000000;
-  line-height:1.0;
-  font-weight:5550;
-  
+.nav-links{
+  display:flex;
+  gap:18px;
+  align-items:center;
 }
 
-.hero p.lead{
-  margin:0.4rem 0;
+.nav-links a{
   font-weight:700;
-  color: #f1ff75;
-  text-shadow: 1px 1px 2px #000;
-  font-weight: 5500;
-  
+  color:#374151;
 }
 
-.hero .cta-row{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:center;
-  margin-top:8px;
-}
-
-/* ================= BUTTONS ================= */
-
-.btn{
-  display:inline-block;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:900;
-  box-shadow:0 6px 16px rgba(0,0,0,0.35);
-  transition:transform .18s ease, filter .18s ease;
-}
-
-.btn-primary{
-  background:var(--brand-blue);
-  color:#fff;
-}
-
-.btn-phone{
-  background:linear-gradient(90deg,#ffb700,var(--accent));
-  color:#000;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-  filter:brightness(1.05);
-}
-
-/* ================= TRUST & RATINGS ================= */
-
-.trust-strip{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  justify-content:center;
-  padding:14px;
-  margin:18px 0;
-  background:var(--card);
-  border-radius:14px;
-  box-shadow:var(--shadow);
-}
-
-.trust-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  padding:8px 12px;
-}
-
-.trust-item strong{
-  display:block;
-  color:#000000;
-  font-weight:900;
-}
-
-.trust-stars{
-  color:#ffcc00;
-  font-weight:900;
-  font-size:1.2rem;
-}
-
-/* ================= TWO COLUMN SECTIONS ================= */
-
-.row{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:20px;
-}
-
-@media(min-width:820px){
-  .row{grid-template-columns:1fr 420px}
-}
-
-/* ================= CONTENT CARD ================= */
-
-.card{
-  background:var(--card);
-  padding:22px;
-  border-radius:14px;
-  box-shadow:var(--shadow);
-  border:1px solid var(--border);
-}
-
-.kicker{
+.nav-links a:hover{
   color:var(--brand-blue);
-  font-weight:900;
-  margin-bottom:8px;
 }
 
-.h2{
-  font-size:1.25rem;
-  font-weight:900;
-  margin:6px 0 12px;
-  color:#ffffff;
+/* =====================================================
+   HERO — HIGH IMPACT, CLEAN
+===================================================== */
+
+.hero{
+  position:relative;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  min-height:420px;
+  box-shadow:var(--shadow-md);
 }
 
-
-
-/* ================= FEATURES GRID ================= */
-
-.features{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:12px;
-  margin-top:14px;
+.hero-bg{
+  position:absolute;
+  inset:0;
 }
 
-@media(min-width:640px){
-  .features{grid-template-columns:repeat(2,1fr)}
-}
-
-.feature{
-  background:#242433;
-  padding:14px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  color:#ffffff;
-}
-
-/* ================= IMAGE PROOF GALLERY ================= */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-@media(min-width:640px){
-  .gallery{grid-template-columns:repeat(3,1fr)}
-}
-
-.gallery img{
-  width:100%;
-  height:170px;
+.hero-bg img{
+  height:100%;
   object-fit:cover;
-  border-radius:12px;
-  box-shadow:var(--shadow);
 }
 
-/* ================= FINAL CTA ================= */
-
-.final-cta{
-  margin:22px 0;
-  padding:26px;
-  border-radius:14px;
-  background:linear-gradient(90deg,#202030,#2a2a3d);
-  box-shadow:var(--shadow);
-  text-align:center;
-  border:1px solid var(--border);
-}
-
-.final-cta h2{
-  margin:0 0 12px;
-  font-size:1.2rem;
-  color:#ffffff;
-}
-
-/* FINAL CTA BUTTON ROW – FIX SPACING */
-
-.final-cta-buttons{
-  display: flex;
-  justify-content: center;
-  gap: 14px;          /* clean, intentional spacing */
-  margin-top: 16px;
-  flex-wrap: wrap;    /* mobile-safe */
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-  padding:26px;
-  text-align:center;
-  font-size:0.95rem;
-  color:#bfc0d0;
-  border-top:1px solid var(--border);
-  margin-top:40px;
-}
-
-/* ================= TEXT HELPERS ================= */
-
-.meta{
-  font-size:0.95rem;
-  color:var(--muted);
-}
-
-
-
-.small{
-  font-size:0.92rem;
-  color:#1f5cff;
-  
- 
-}
-
-/* ================= ACCESSIBILITY ================= */
-
-a:focus,button:focus{
-  outline:3px solid #51515766;
-  outline-offset:3px;
-}
-
-/* ================= UTILITIES ================= */
-
-.center{text-align:center}
-.row-gap{margin-top:14px}
-.list-plain{padding-left:20px}
-
-/* ================= LONG COPY ================= */
-
-.long-copy p{
-  margin:0 0 14px 0;
-  line-height:1.75;
-  color:#000000;
-}
-
-.long-copy h3{
-  margin-top:22px;
-  margin-bottom:10px;
-  color:var(--brand-blue);
-}
-
-/* ================= MOBILE TWEAKS ================= */
-
-@media(max-width:420px){
-  .hero h1{font-size:1.35rem}
-  .hero p.lead{font-size:0.95rem}
-  .gallery img{height:130px}
-}
-
-
-/* NEXT STEPS – TRAILBLAZER NAV */
-.next-steps {
-  margin-top: 28px;
-  text-align: center;
-}
-
-.next-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  margin-top: 14px;
-}
-
-/* Individual cards */
-.next-card {
-  display: block;
-  text-align: left;
-  padding: 22px 20px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #b4b3b3, #bdbcbc);
-  border: 2px solid var(--brand-blue);
-  text-decoration: none;
-  color: var(--brand-blue);
-  transition: 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Subtle premium hover */
-.next-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
-  background: var(--brand-blue);
-  color: #000000;
-}
-
-/* Top label */
-.next-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.8;
-}
-
-/* Headline */
-.next-card h3 {
-  margin: 6px 0 6px;
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.4px;
-}
-
-/* Body */
-.next-card p {
-  margin: 0 0 10px;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  opacity: 0.9;
-}
-
-/* CTA microcopy */
-.next-cta {
-  font-weight: 800;
-  font-size: 0.95rem;
-}
-
-
-/* Headings feel more authoritative */
-.long-copy h2.h2 {
-  letter-spacing: -0.4px;
-}
-
-/* Lists feel more deliberate and premium */
-.long-copy ul.list-plain li {
-  margin-bottom: 8px;
-  padding-left: 4px;
-  position: relative;
-}
-
-.long-copy ul.list-plain li::marker {
-  color: var(--brand-blue);
-}
-
-/* CTA blocks stand out without being aggressive */
-.long-copy .btn-phone {
-  margin-top: 8px;
-}
-
-/* Pull-quote style emphasis for key value lines */
-.long-copy p.small {
-  background: rgba(99,99,252,0.06);
-  padding: 12px 14px;
-  border-left: 3px solid var(--brand-blue);
-  border-radius: 8px;
-}
-
-/* ================= SERVICE IMAGE (CLEAN + INTEGRATED) ================= */
-
-.service-image {
-  margin: 18px 0;
-}
-
-.service-image img {
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.service-image .image-caption {
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: #f1ff75;
-  text-align: center;
-  line-height: 1.4;
-}
-
-/* Subtle blend into content (trust > hype) */
-.proof-blend {
-  position: relative;
-}
-
-.proof-blend::after {
-  content: "";
-  display: block;
-  margin-top: 18px;
-  height: 1px;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(99,99,252,0.35),
-    transparent
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(31,92,255,.25),
+    rgba(15,23,42,.85)
   );
 }
 
-/* Mobile breathing room */
-@media (max-width: 480px) {
-  .card.long-copy {
-    padding: 20px 18px;
-  }
+.hero-overlay{
+  position:relative;
+  z-index:2;
+  padding:36px 24px;
+  max-width:720px;
+  margin:auto;
+  text-align:center;
 }
 
-
-/* ================= STATIC MAP STYLING ================= */
-
-.map-wrap {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 2px solid var(--brand-blue);
-  box-shadow: var(--shadow);
-  background: #000; /* prevents white flash while loading */
+.hero h1{
+  color:#fff;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:900;
+  line-height:1.05;
+  margin-bottom:16px;
 }
 
-.map-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ================= MOBILE MAP ZOOM-OUT FIX ================= */
-/* Shows more of the service area map on mobile */
-
-@media (max-width: 600px) {
-  .map-wrap {
-    height: 200px;               /* shorter = zoomed-out feel */
-  }
-
-  .map-wrap img {
-    object-fit: contain;         /* show full map, no crop */
-    object-position: center;     /* keep Enfield centred */
-    background: #000;            /* clean edges if needed */
-  }
-}
-
-/* Desktop refinement */
-@media (min-width: 768px) {
-  .map-wrap {
-    height: 360px;
-  }
-}
-
-
-/* Make the kicker feel like a badge */
-.card.long-copy .kicker {
-  display: inline-block;
-  background: var(--brand-blue);
-  color: #000000;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  margin-bottom: 12px;
-}
-
-/* Strengthen the headline visually */
-.card.long-copy .h2 {
-  margin-top: 14px;
-  margin-bottom: 16px;
-}
-
-/* Improve paragraph rhythm */
-.card.long-copy p {
-  font-size: 1.05rem;
-  line-height: 1.65;
-}
-
-/* Lift the list visually */
-.card.long-copy .list-plain {
-  margin: 18px 0 18px 0;
-  padding-left: 18px;
-}
-
-.card.long-copy .list-plain li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 10px;
-}
-
-.card.long-copy .list-plain li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--brand-blue);
-  font-weight: 700;
-}
-
-/* Subtle premium hover (desktop only) */
-@media (hover: hover) {
-  .card.long-copy:hover {
-    transform: translateY(-2px);
-    transition: transform 0.25s ease;
-  }
-}
-
-
-  /* ================= TRUST BAR MOBILE SPACING ================= */
-  .top-trust {
-    max-width: 94%;     /* consistent left/right gap */
-    padding: 8px 12px;  /* slightly thinner on mobile */
-    gap: 8px;
-    font-size: 0.85rem;
-  }
-    
-
-/* ================= LOCAL AREA IMAGE (ENFIELD TRUST ANCHOR) ================= */
-
-.local-proof img {
-  filter: contrast(1.02) saturate(0.95); /* keeps it real, not stocky */
-}
-
-/* Slightly tighter spacing to feel embedded in copy */
-.local-proof {
-  margin-top: 14px;
-  margin-bottom: 18px;
-}
-
-/* Caption tone = neighbourly, not promotional */
-.local-proof .image-caption {
-  font-size: 0.85rem;
-  color: var(--muted);
-  opacity: 0.9;
-}
-
-
-@media (max-width: 600px)    
-
-  .card{
-    padding-left: 18px;
-    padding-right: 18px;
-  }  
-
-/* ================= HERO (SINGLE SOURCE OF TRUTH) ================= */
-
-.hero {
-  position: relative;
-  min-height: 360px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin: 16px 0;
-  box-shadow: var(--shadow);
-  background: linear-gradient(
-    180deg,
-    #1f5cff;
-  )
-};
-
-@media (min-width: 768px) {
-  .hero {
-    min-height: 440px;
-  }
-}
-
-/* Remove card padding ONLY when used as hero */
-.hero-image.card {
-  padding: 0;
-}
-
-/* Background image wrapper */
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-/* Image fills container — stable */
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-
-/* Overlay */
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  padding: 32px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-  text-align: center;
-
-
-.top-hero-p {
-  color: #f1ff75;
-  text-shadow: 3px 3px 6px #000;
-}
-
-
-
+.top-hero-p,
 .second-top-hero-p{
-color: #f1ff75;
- text-shadow: 3px 3px 6px #000;
+  color:#e5e7eb;
+  font-size:1.05rem;
+  margin-bottom:12px;
 }
 
+/* =====================================================
+   BUTTONS — CALL-FOCUSED
+===================================================== */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:900;
+  transition:.15s ease;
+}
+
+.btn-phone{
+  background:linear-gradient(90deg,var(--accent),#ffd75e);
+  color:#000;
+  box-shadow:0 10px 22px rgba(255,183,0,.35);
+}
+
+.btn-phone:hover{
+  transform:translateY(-2px);
+}
+
+/* =====================================================
+   TRUST BAR
+===================================================== */
+
+.top-trust{
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  padding:18px;
+}
+
+@media(min-width:700px){
+  .top-trust{grid-template-columns:repeat(3,1fr)}
+}
+
+.trust-item{text-align:center}
+.trust-item strong{font-weight:900}
+
+/* =====================================================
+   CONTENT CARDS
+===================================================== */
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius-lg);
+  padding:36px;
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--border);
+}
+
+.long-copy p{
+  max-width:65ch;
+  margin-bottom:16px;
+}
+
+.kicker{
+  display:inline-block;
+  background:var(--brand-blue);
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  margin-bottom:12px;
+}
+
+.h2{
+  font-size:1.6rem;
+  font-weight:900;
+  margin-bottom:16px;
+}
+
+/* =====================================================
+   LISTS
+===================================================== */
+
+.list-plain{
+  padding-left:18px;
+}
+
+.list-plain li{
+  margin-bottom:10px;
+  position:relative;
+}
+
+.list-plain li::before{
+  content:"✔";
+  position:absolute;
+  left:-18px;
+  color:var(--brand-blue);
+}
+
+/* =====================================================
+   IMAGE BLOCKS
+===================================================== */
+
+.service-image,
+.map-wrap,
+.gallery img{
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+}
+
+.image-caption{
+  font-size:.85rem;
+  color:var(--muted);
+  text-align:center;
+  margin-top:10px;
+}
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.map-wrap{
+  height:280px;
+}
+
+.map-wrap img{
+  height:100%;
+  object-fit:cover;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+  margin-top:80px;
+  padding:40px 20px;
+  text-align:center;
+  font-size:.9rem;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+/* =====================================================
+   MOBILE POLISH
+===================================================== */
+
+@media(max-width:768px){
+  section{margin-bottom:48px}
+  .card{padding:24px}
+  .hero{min-height:380px}
 }
 
 
+/* =====================================================
+   CTA ELEVATION — PREMIUM, TRUST-DRIVEN
+===================================================== */
 
+/* Universal CTA baseline upgrade */
+.btn{
+  position:relative;
+  font-size:0.95rem;
+  letter-spacing:.2px;
+  border:1px solid rgba(0,0,0,.08);
+  backdrop-filter:saturate(120%);
+}
 
+/* Primary CALL button — hero & site-wide */
+.btn--call{
+  background:
+    linear-gradient(
+      180deg,
+      #ffd75e 0%,
+      var(--accent) 100%
+    );
+  color:#1e1e1e;
+  box-shadow:
+    0 12px 28px rgba(255,183,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.6);
+}
 
+.btn--call:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 18px 36px rgba(255,183,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.75);
+}
 
+/* Secondary CTA (Services etc) */
+.btn--primary{
+  background:#ffffff;
+  color:var(--brand-blue);
+  border:1px solid rgba(31,92,255,.25);
+  box-shadow:var(--shadow-sm);
+}
 
-@media (min-width: 768px) 
-  .hero .inner,
-  .hero-overlay {
-    padding: 40px 32px;
+.btn--primary:hover{
+  background:#f8faff;
+  box-shadow:var(--shadow-md);
+}
+
+/* =====================================================
+   CTA GROUP — STRUCTURE & BREATHING ROOM
+===================================================== */
+
+.cta-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:24px;
+  margin-bottom:16px;
+}
+
+/* Mobile: stack cleanly */
+@media(max-width:640px){
+  .cta-group{
+    flex-direction:column;
   }
 
+  .cta-group .btn{
+    width:100%;
+  }
+}
+
+/* =====================================================
+   HERO CTA FRAMING (SUBTLE, PREMIUM)
+===================================================== */
+
+.section--hero .cta-group{
+  padding:22px;
+  background:rgba(255,255,255,.08);
+  border-radius:16px;
+  backdrop-filter:blur(6px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.15);
+}
+
+/* =====================================================
+   FINAL CTA SECTION — VISUAL ANCHOR
+===================================================== */
+
+.section--cta{
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9ff 100%
+    );
+  border-radius:var(--radius-lg);
+  padding:48px 24px;
+  box-shadow:var(--shadow-md);
+  text-align:center;
+}
+
+.section--cta .heading-lg{
+  max-width:22ch;
+  margin-inline:auto;
+}
+
+.section--cta .cta-group{
+  justify-content:center;
+}
+
+
+/* =====================================================
+   NAV CARDS — CLEAN, UNAMBIGUOUS, TRUST-LED
+===================================================== */
+
+.nav-grid{
+  display:grid;
+  gap:24px;
+}
+
+@media(min-width:720px){
+  .nav-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* Entire card is the action */
+.nav-card{
+  display:block;
+  background:#ffffff;
+  border-radius:18px;
+  padding:32px;
+  border:1px solid rgba(0,0,0,.08);
+  box-shadow:var(--shadow-sm);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+/* Hover = lift the whole card */
+.nav-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+}
+
+/* Label */
+.nav-label{
+  display:inline-block;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--brand-blue);
+  margin-bottom:8px;
+}
+
+/* Headline */
+.nav-card h3{
+  margin:6px 0 10px;
+  font-size:1.4rem;
+  font-weight:900;
+  letter-spacing:-.3px;
+  color:var(--text);
+}
+
+/* Description */
+.nav-card p{
+  margin:0 0 18px;
+  color:var(--muted);
+  max-width:42ch;
+}
+
+/* Directional hint — NOT a button */
+.nav-cta{
+  font-weight:800;
+  font-size:.95rem;
+  color:var(--brand-blue);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* Subtle arrow motion only */
+.nav-card:hover .nav-cta{
+  transform:translateX(4px);
+}
 
 
 
 
+
+/* =====================================================
+   GLOBAL HERO CONTENT ALIGNMENT FIX
+   Keeps H1s aligned with body content across all pages
+===================================================== */
+
+.section--hero .hero-content,
+.section--hero .hero-overlay {
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 5vw, 32px);
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .section--hero .hero-content,
+  .section--hero .hero-overlay {
+    padding-inline: 40px;
+  }
+}
