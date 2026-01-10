@@ -635,3 +635,30 @@ section{margin-bottom:64px}
   max-width:var(--max);
   margin-inline:auto;
 }
+
+
+.local-plant-visuals {
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.plant-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.image-caption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+/* Desktop enhancement */
+@media (min-width: 768px) {
+  .local-plant-visuals {
+    grid-template-columns: 1fr 1fr;
+  }
+}
