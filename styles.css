@@ -662,3 +662,23 @@ section{margin-bottom:64px}
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
+/* Image block for process section on service page */
+.image-block {
+  margin: 1.5rem 0;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+
