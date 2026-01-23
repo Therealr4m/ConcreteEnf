@@ -621,9 +621,10 @@ section{margin-bottom:64px}
   }
 }
 
+/* right here mate */
 .image-grid img{
   height:260px;
-  object-fit:cover;
+  object-fit: contain;
   border-radius:var(--radius);
 }
 
