@@ -683,20 +683,32 @@ section{margin-bottom:64px}
 }
 
 
-/* =====================================================
-   BLOG AUTHORITY LINKS — CLEAN, TRUSTED
-===================================================== */
-
+/* HELPFUL LINKS / BLOG LINKS */
 .blog-link{
-  color:var(--brand-blue);
-  font-weight:600;
+  color:blue;
+  font-weight: 600;
   text-decoration:underline;
+  
 }
 
 .blog-link:hover{
   text-decoration:none;
   opacity:.85;
 }
+
+.external-link {
+  color: #1a0dab;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.external-link:hover {
+
+  opacity: 0.85;
+
+}
+
+
 
 
 
