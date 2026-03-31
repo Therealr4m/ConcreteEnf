@@ -97,14 +97,6 @@ section{margin-bottom:64px}
   }
 }
 
-
-
-
-
-
-
-
-
 /* =====================================================
    HERO — HIGH IMPACT, CLEAN
 ===================================================== */
@@ -238,16 +230,6 @@ section{margin-bottom:64px}
   color:#333;
   opacity:.8;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* =====================================================
    CONTENT CARDS
@@ -588,7 +570,6 @@ section{margin-bottom:64px}
 }
 
 
-
 /* =====================================================
    GLOBAL HERO CONTENT ALIGNMENT FIX
    Keeps H1s aligned with body content across all pages
@@ -610,8 +591,6 @@ section{margin-bottom:64px}
     padding-inline: 40px;
   }
 }
-
-
 
 /* -------------------------------------
    1. GLOBAL SECTION WIDTH ANCHOR
@@ -745,9 +724,6 @@ section{margin-bottom:64px}
   border-radius: 8px;
 }
 
-
-
-
 /* HELPFUL LINKS / BLOG LINKS */
 .blog-link{
   color:blue;
@@ -776,4 +752,200 @@ section{margin-bottom:64px}
 
 
 
+/* =====================================================
+  TOP OF PAGE NAVIGATION
+===================================================== */
 
+
+.site-nav{
+  max-width:var(--max);
+  margin:28px auto;
+  padding:0 clamp(16px,4vw,32px);
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+/* NAV BUTTON */
+
+.site-nav-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:14px 16px;
+
+  background:#ffffff;
+  border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,.12);
+
+  font-weight:800;
+  font-size:.95rem;
+
+  box-shadow:var(--shadow-sm);
+  transition:.18s ease;
+}
+
+/* ARROWS */
+
+.nav-arrow{
+  font-size:.9rem;
+  opacity:.7;
+}
+
+/* HOVER */
+
+.site-nav-link:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+/* CALL BUTTON */
+
+.nav-call{
+  background:linear-gradient(
+    180deg,
+    #ffd75e 0%,
+    var(--accent) 100%
+  );
+}
+
+/* -----------------------------------------------------
+   GUIDES DROPDOWN
+----------------------------------------------------- */
+
+.site-nav-dropdown{
+  position:relative;
+}
+
+.nav-dropdown-toggle{
+  width:100%;
+  cursor:pointer;
+  background:#ffffff;
+}
+
+/* MENU */
+
+.nav-dropdown-menu{
+  display:none;
+
+  position:absolute;
+  top:100%;
+  left:0;
+
+  width:100%;
+
+  background:#ffffff;
+  border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,.12);
+
+  box-shadow:var(--shadow-md);
+
+  padding:8px 0;
+  z-index:5;
+}
+
+.nav-dropdown-menu a{
+  display:block;
+  padding:10px 16px;
+  font-size:.9rem;
+  font-weight:600;
+}
+
+.nav-dropdown-menu a:hover{
+  background:#f7f7f7;
+}
+
+/* SHOW MENU */
+
+.site-nav-dropdown:hover .nav-dropdown-menu{
+  display:block;
+}
+
+/* -----------------------------------------------------
+   DESKTOP
+----------------------------------------------------- */
+
+@media(min-width:768px){
+
+  .site-nav{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+}
+
+
+
+/* =====================================================
+   LOCATION HERO — PREMIUM CONTRACTOR STYLE
+===================================================== */
+
+.location-hero{
+  position:relative;
+  max-width:var(--max);
+  margin:0 auto 56px;
+  border-radius:var(--radius-lg);
+  border:1px solid rgba(0,0,0,.08);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+}
+
+/* hero image */
+.location-hero img{
+  width:100%;
+  height:440px;
+  object-fit:cover;
+  display:block;
+}
+
+/* layered gradient overlay */
+.location-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31,92,255,.18) 0%,
+      rgba(0,0,0,.35) 55%,
+      rgba(0,0,0,.75) 100%
+    );
+}
+
+/* text wrapper */
+.location-hero-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:28px;
+  z-index:2;
+}
+
+/* headline */
+.location-hero-overlay h1{
+  color:#ffffff;
+  font-weight:900;
+  font-size:clamp(2.1rem,4vw,2.7rem);
+  line-height:1.12;
+  letter-spacing:-.02em;
+
+  max-width:24ch;
+
+  text-shadow:
+    0 6px 18px rgba(0,0,0,.65),
+    0 2px 6px rgba(0,0,0,.5);
+}
+
+/* desktop enhancement */
+@media(min-width:900px){
+
+  .location-hero img{
+    height:460px;
+  }
+
+}
