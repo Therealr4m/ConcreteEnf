@@ -823,7 +823,14 @@ section{margin-bottom:64px}
   width:100%;
   cursor:pointer;
   background:#ffffff;
+  border:none;
+  appearance:none;
 }
+
+ .nav-dropdown-toggle:focus{
+  outline:none;
+}
+
 
 /* MENU */
 
@@ -859,7 +866,15 @@ section{margin-bottom:64px}
 
 /* SHOW MENU */
 
-.site-nav-dropdown:hover .nav-dropdown-menu{
+/* Desktop hover */
+@media (hover: hover) {
+  .site-nav-dropdown:hover .nav-dropdown-menu{
+    display:block;
+  }
+}
+
+/* Mobile tap behaviour */
+.site-nav-dropdown:focus-within .nav-dropdown-menu{
   display:block;
 }
 
@@ -883,8 +898,7 @@ section{margin-bottom:64px}
 
 .location-hero{
   position:relative;
-  max-width:var(--max);
-  margin:0 auto 56px;
+  margin-bottom:56px;
   border-radius:var(--radius-lg);
   border:1px solid rgba(0,0,0,.08);
   overflow:hidden;
@@ -949,3 +963,4 @@ section{margin-bottom:64px}
   }
 
 }
+
