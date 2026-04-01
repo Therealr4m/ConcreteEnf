@@ -813,9 +813,10 @@ section{margin-bottom:64px}
 }
 
 /* Show when details open */
-.site-nav-dropdown details[open] .nav-dropdown-menu {
-  display: block;
+details[open] .nav-dropdown-menu {
+  display:block;
 }
+
 
 /* Dropdown links */
 .nav-dropdown-menu a {
@@ -849,6 +850,11 @@ section{margin-bottom:64px}
   opacity: 0.7;
   transition: transform 0.25s ease;
 }
+
+.nav-arrow{
+  transition: transform .25s ease;
+}
+
 
 /* Hover effect on summary buttons */
 .site-nav-dropdown summary:hover {
