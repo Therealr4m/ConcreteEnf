@@ -864,7 +864,6 @@ section{margin-bottom:64px}
   background:#f7f7f7;
 }
 
-/* SHOW MENU */
 
 /* Desktop hover */
 @media (hover: hover) {
@@ -875,6 +874,10 @@ section{margin-bottom:64px}
 
 /* Mobile tap behaviour */
 .site-nav-dropdown:focus-within .nav-dropdown-menu{
+  display:block;
+}
+
+ .site-nav-dropdown:focus .nav-dropdown-menu{
   display:block;
 }
 
