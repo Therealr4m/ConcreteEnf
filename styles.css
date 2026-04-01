@@ -799,17 +799,30 @@ section{margin-bottom:64px}
 
 /* Dropdown menu */
 .nav-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  border-radius: var(--radius);
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow: var(--shadow-md);
-  padding: 8px 0;
-  z-index: 5;
+  display:none;
+  background:#fff;
+  border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,.12);
+  box-shadow:var(--shadow-sm);
+  margin-top:6px;
+  padding:8px 0;
+
+}
+
+ @media(min-width:768px){
+
+  .site-nav-dropdown{
+    position:relative;
+  }
+
+  .nav-dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    z-index:5;
+  }
+
 }
 
 /* Show when details open */
@@ -851,9 +864,6 @@ details[open] .nav-dropdown-menu {
   transition: transform 0.25s ease;
 }
 
-.nav-arrow{
-  transition: transform .25s ease;
-}
 
 
 /* Hover effect on summary buttons */
