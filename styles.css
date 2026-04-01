@@ -813,7 +813,7 @@ section{margin-bottom:64px}
 }
 
 /* Show when details open */
-.site-nav-dropdown[open] .nav-dropdown-menu {
+.site-nav-dropdown details[open] .nav-dropdown-menu {
   display: block;
 }
 
