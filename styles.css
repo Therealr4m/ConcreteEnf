@@ -982,54 +982,6 @@ details[open] .nav-dropdown-menu {
 
 
 /* =====================================================
-   GLOBAL TEXT HERO OVERLAY / REUSABLE)
-===================================================== */
-
-.location-hero{
-  position:relative;
-  margin-bottom:56px;
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  box-shadow:var(--shadow-md);
-}
-
-.location-hero img{
-  width:100%;
-  height:420px;
-  object-fit:cover;
-}
-
-.location-hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(
-    180deg,
-    rgba(31,92,255,.25),
-    rgba(0,0,0,.75)
-  );
-}
-
-.location-hero-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:24px;
-  z-index:2;
-}
-
-.location-hero-overlay h1{
-  color:#fff;
-  font-weight:900;
-  font-size:clamp(2.2rem,4vw,2.8rem);
-  max-width:22ch;
-  text-shadow:0 6px 18px rgba(0,0,0,.7);
-}
-
-/* =====================================================
    IMAGE COMPARISON GRID (GLOBAL / REUSABLE)
 ===================================================== */
 
@@ -1048,4 +1000,35 @@ details[open] .nav-dropdown-menu {
   border-radius:var(--radius);
   box-shadow:var(--shadow-md);
 }
+
+
+
+
+/* Image frame = controls size + makes it look designed */
+.image-frame {
+  width: 100%;
+  max-width: 800px;        /* keeps it neat, not full stretched */
+  margin: 0 auto;          /* centers it */
+  aspect-ratio: 16 / 9;    /* consistent clean shape */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Image behaviour inside frame */
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills frame cleanly */
+  display: block;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .image-frame {
+    aspect-ratio: 4 / 3;   /* slightly taller for mobile */
+  }
+}
+
+
+
 
