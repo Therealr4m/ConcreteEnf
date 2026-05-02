@@ -364,6 +364,7 @@ section{margin-bottom:64px}
       180deg,
       #ffd75e 0%,
       var(--accent) 100%
+      
 
     );
   color:#1e1e1e;
@@ -371,6 +372,9 @@ section{margin-bottom:64px}
     0 12px 28px rgba(255,183,0,.35),
     inset 0 1px 0 rgba(255,255,255,.6);
     margin-bottom: 7px;
+    padding: 9px;
+    font-size: small;
+    
 }
 
 .btn--call:hover{
@@ -386,6 +390,9 @@ section{margin-bottom:64px}
   color:var(--brand-blue);
   border:1px solid rgba(31,92,255,.25);
   box-shadow:var(--shadow-sm);
+  font-size: small;
+  margin-bottom: 7px;
+  padding: 9px;
 }
 
 .btn--primary:hover{
@@ -1000,8 +1007,6 @@ details[open] .nav-dropdown-menu {
   border-radius:var(--radius);
   box-shadow:var(--shadow-md);
 }
-
-
 
 
 /* Image frame = controls size + makes it look designed */
