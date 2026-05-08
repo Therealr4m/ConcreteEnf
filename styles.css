@@ -3,13 +3,13 @@
 ===================================================== */
 :root{
   --brand-black:#1e1e1e;
-  --brand-blue:#1f5cff;
+  --brand-blue:#355c7d;
   --brand-light:#5973b9;
-  --accent:#ffb700;
+  --accent:#d4a017;
 
-  --bg:#fffb00;
-  --card:#cecece;
-  --border:#000000;
+  --bg:#f5f5f5;
+  --card:#ffffff;
+  --border:#e5e7eb;
 
   --text:#1e1e1e;
   --muted:#000000;
@@ -231,6 +231,9 @@ section{margin-bottom:64px}
   opacity:.8;
 }
 
+.text-small{
+  text-align: center;
+}
 /* =====================================================
    CONTENT CARDS
 ===================================================== */
@@ -436,31 +439,6 @@ section{margin-bottom:64px}
     inset 0 0 0 1px rgba(255,255,255,.15);
 }
 
-/* =====================================================
-   FINAL CTA SECTION — VISUAL ANCHOR
-===================================================== */
-
-.section--cta{
-  background:
-    linear-gradient(
-      180deg,
-      #ffffff 0%,
-      #f7f9ff 100%
-    );
-  border-radius:var(--radius-lg);
-  padding:48px 24px;
-  box-shadow:var(--shadow-md);
-  text-align:center;
-}
-
-.section--cta .heading-lg{
-  max-width:22ch;
-  margin-inline:auto;
-}
-
-.section--cta .cta-group{
-  justify-content:center;
-}
 
 
 /* =====================================================
@@ -546,7 +524,7 @@ section{margin-bottom:64px}
   margin:48px auto 0;
   padding-top:24px;
   border-top:1px solid rgba(0,0,0,.08);
-  text-align: center;
+text-align: center;
 }
 
 .section--helpful .heading-sm{
@@ -554,7 +532,39 @@ section{margin-bottom:64px}
   font-weight:800;
   color:var(--text);
   margin-bottom:12px;
+
 }
+
+ /* =====================================================
+   FINAL CTA
+===================================================== */
+
+.section--cta{
+  text-align:center;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+  gap:18px;
+
+  padding-top:70px;
+  padding-bottom:90px;
+}
+
+
+
+.section--cta .text-small{
+  max-width:520px;
+  margin:0 auto;
+}
+
+
+.section--cta .btn{
+  margin-top:8px;
+}
+
+
 
 .helpful-links{
   list-style:none;
@@ -588,8 +598,6 @@ section{margin-bottom:64px}
   margin-inline: auto;
   padding-inline: clamp(16px, 5vw, 32px);
 }
-
-
 
 
 @media (min-width: 1024px) {
@@ -986,8 +994,6 @@ details[open] .nav-dropdown-menu {
   }
 
 }
-
-
 /* =====================================================
    IMAGE COMPARISON GRID (GLOBAL / REUSABLE)
 ===================================================== */
@@ -1034,6 +1040,197 @@ details[open] .nav-dropdown-menu {
   }
 }
 
+/* latest home hero below */
+/* =====================================================
+   FULL WIDTH HERO — PREMIUM LOCAL CONTRACTOR STYLE
+===================================================== */
 
+.hero-full{
+  position:relative;
+  min-height:620px;
+  overflow:hidden;
+}
 
+.hero-full img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
+/* dark overlay */
+.hero-full::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.35) 0%,
+      rgba(0,0,0,.58) 55%,
+      rgba(0,0,0,.72) 100%
+    );
+}
+
+/* overlay content */
+.hero-overlay{
+  position:relative;
+  z-index:2;
+
+  min-height:620px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:32px;
+}
+
+/* content wrapper */
+.hero-inner{
+  width:100%;
+  max-width:760px;
+}
+
+/* small top label */
+.hero-kicker{
+  display:inline-block;
+
+  background:rgba(255,255,255,.12);
+
+  color:#fff;
+
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.06em;
+
+  margin-bottom:18px;
+
+  backdrop-filter:blur(6px);
+}
+
+/* headline */
+.hero-full h1{
+  color:#fff;
+
+  font-size:clamp(2.4rem,5vw,4rem);
+
+  line-height:1.05;
+
+  font-weight:900;
+
+  margin-bottom:18px;
+
+  letter-spacing:-0.03em;
+}
+
+/* subtext */
+.hero-subtext{
+  color:#f3f4f6;
+
+  font-size:1.15rem;
+
+  line-height:1.7;
+
+  margin-bottom:26px;
+}
+
+/* human note */
+.hero-note{
+  color:#d1d5db;
+
+  font-size:.95rem;
+
+  margin-top:18px;
+
+  max-width:56ch;
+
+  margin-inline:auto;
+}
+
+/* mobile tightening */
+@media(max-width:768px){
+
+  .hero-full{
+    min-height:540px;
+  }
+
+  .hero-overlay{
+    min-height:540px;
+    padding:24px;
+  }
+
+  .hero-full h1{
+    font-size:2.3rem;
+  }
+
+  .hero-subtext{
+    font-size:1rem;
+  }
+
+}
+
+/* =====================================================
+   WHY WORK WITH US
+===================================================== */
+
+.why-work-with-us{
+  padding:10px 0 60px;
+}
+
+.why-work-with-us h2{
+  margin-bottom:28px;
+  text-align:center;
+}
+
+.why-points{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.why-point{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+}
+
+.why-tick{
+  width:26px;
+  height:26px;
+
+  border-radius:50%;
+
+  background:#1f5cff;
+
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:.8rem;
+  font-weight:800;
+
+  flex-shrink:0;
+
+  margin-top:2px;
+
+  box-shadow:
+    0 8px 18px rgba(31,92,255,.28);
+}
+
+.why-point p{
+  margin:0;
+  font-size:1rem;
+  line-height:1.6;
+  color:#1e1e1e;
+}
