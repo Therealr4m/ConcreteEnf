@@ -1,11 +1,28 @@
 const stickyCta = document.getElementById("stickyCta");
 
+let hasAppeared = false;
+
 window.addEventListener("scroll", () => {
 
-  if (window.scrollY > 700) {
+  const scrollY = window.scrollY;
+
+  // trigger after scrolling
+  if (scrollY > 700 && !hasAppeared) {
+
+    hasAppeared = true;
+
     stickyCta.classList.add("show");
-  } else {
-    stickyCta.classList.remove("show");
+
+    // hide again after 6 seconds
+    setTimeout(() => {
+      stickyCta.classList.remove("show");
+
+      // allow it to appear again later
+      setTimeout(() => {
+        hasAppeared = false;
+      }, 12000);
+
+    }, 6000);
   }
 
 });
