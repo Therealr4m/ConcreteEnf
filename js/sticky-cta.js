@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
         hasAppeared = false;
       }, 12000);
 
-    }, 8000);
+    }, 10500);
   }
 
 });
