@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
 
   // trigger after scrolling
-  if (scrollY > 700 && !hasAppeared) {
+  if (scrollY > 825 && !hasAppeared) {
 
     hasAppeared = true;
 
@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
         hasAppeared = false;
       }, 12000);
 
-    }, 6000);
+    }, 8000);
   }
 
 });
