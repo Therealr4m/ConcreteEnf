@@ -345,7 +345,12 @@ section{margin-bottom:64px}
 
   .cta-group .btn{
     width:100%;
+    
   }
+}
+
+.home-cta{
+  text-align: center;
 }
 
 /* =====================================================
@@ -1293,6 +1298,7 @@ border:1px solid rgba(0,0,0,.08);
 border-radius:6px;
 box-shadow:0 10px 22px rgba(0,0,0,.08);
 transition:.25s ease;
+
 }
 
 .btn:hover{
