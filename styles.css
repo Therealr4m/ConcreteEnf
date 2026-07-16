@@ -285,6 +285,66 @@ section{margin-bottom:64px}
   margin-top:10px;
 }
 
+/* =========================================
+PROJECT PREVIEW
+Reusable on every service/location page
+========================================= */
+.project-preview{
+padding:36px 22px;
+background:var(--bg);
+
+}
+
+.project-preview__inner{
+max-width:var(--max);
+margin:auto;
+
+}
+
+.project-preview__grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+
+}
+
+.project-preview__grid img{
+display:block;
+width:100%;
+height:320px;
+object-fit:cover;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:var(--radius-lg);
+box-shadow:var(--shadow-sm);
+transition:.25s ease;
+
+}
+
+.project-preview__grid img:hover{
+transform:translateY(-3px);
+box-shadow:var(--shadow-md);
+
+}
+
+@media(max-width:768px){
+.project-preview{
+padding:22px 16px;
+
+}
+
+.project-preview__grid{
+grid-template-columns:1fr;
+gap:14px;
+}
+
+.project-preview__grid img{
+height:220px;
+border-radius:var(--radius);
+}
+}
+
+
 /* =====================================================
    MAP
 ===================================================== */
