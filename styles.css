@@ -359,19 +359,6 @@ border-radius:var(--radius);
 }
 
 /* =====================================================
-   FOOTER
-===================================================== */
-
-.footer{
-  margin-top:80px;
-  padding:40px 20px;
-  text-align:center;
-  font-size:.9rem;
-  color:var(--muted);
-  border-top:1px solid var(--border);
-}
-
-/* =====================================================
    MOBILE POLISH
 ===================================================== */
 
@@ -380,9 +367,6 @@ border-radius:var(--radius);
   .card{padding:24px}
   .hero{min-height:380px}
 }
-
-
-
 
 
 /* =====================================================
@@ -1442,7 +1426,6 @@ border-bottom:4px solid var(--accent);
 .fixed-estimate-cta:hover{
 right:14px;
 }
-
 }
 
 
@@ -1451,4 +1434,141 @@ right:14px;
 
 
 
+/*=====================================================
+FOOTER
+=====================================================*/
 
+.site-footer{
+    margin-top:90px;
+    background:var(--brand-black);
+    color:#fff;
+
+}
+
+.footer-inner{
+    max-width:var(--max);
+    margin:auto;
+    padding:70px 24px 28px;
+
+}
+
+.footer-top{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+
+}
+
+.footer-logo{
+    font-size:2rem;
+    font-weight:900;
+    margin-bottom:12px;
+    letter-spacing:-.03em;
+
+}
+
+.footer-intro{
+    color:rgba(255,255,255,.75);
+    line-height:1.8;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:50px;
+    margin-bottom:60px;
+
+}
+
+.footer-column h3{
+    color:#fff;
+    margin-bottom:18px;
+    font-size:1rem;
+    font-weight:800;
+    position:relative;
+    padding-bottom:10px;
+
+}
+
+.footer-column h3::after{
+    content:"";
+    width:45px;
+    height:3px;
+    background:var(--accent);
+    position:absolute;
+    left:0;
+    bottom:0;
+    border-radius:10px;
+}
+
+.footer-column a{
+    display:block;
+    color:rgba(255,255,255,.72);
+    margin-bottom:11px;
+    transition:.2s;
+    font-size:.95rem;
+}
+
+.footer-column a:hover{
+    color:#fff;
+    padding-left:8px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:24px;
+    text-align:center;
+}
+
+.footer-bottom p{
+
+    color:rgba(255,255,255,.55);
+    margin:0;
+    font-size:.9rem;
+}
+
+/*=========================
+Mobile
+=========================*/
+
+@media(max-width:900px){
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+gap:35px;
+
+}
+}
+
+@media(max-width:600px){
+
+.footer-inner{
+padding:55px 22px 24px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+.footer-top{
+margin-bottom:40px;
+}
+
+.footer-logo{
+font-size:1.7rem;
+
+}
+
+.footer-column{
+text-align:center;
+}
+
+.footer-column h3::after{
+left:50%;
+transform:translateX(-50%);
+
+}
+.footer-column a:hover{
+padding-left:0;
+}
+}
