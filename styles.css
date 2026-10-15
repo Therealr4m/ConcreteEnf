@@ -2086,3 +2086,193 @@ padding-left:0;
     transition: none;
   }
 }
+
+/* =========================================
+   ENFIELD CONCRETE SERVICES
+========================================= */
+
+.enfield-services {
+  padding: 70px 0 76px;
+  background: var(--card);
+}
+
+/* SECTION HEADING */
+
+.enfield-services-heading {
+  max-width: 740px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.enfield-services-heading h2 {
+  margin: 0 0 10px;
+  color: var(--brand-black);
+  font-size: clamp(26px, 3vw, 35px);
+  font-weight: 750;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.enfield-services-heading p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* SERVICES GRID */
+
+.enfield-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* SERVICE CARDS */
+
+.enfield-service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 25px 23px 23px;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.025);
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.enfield-service-card:hover {
+  border-color: rgba(53,92,125,.35);
+  box-shadow: 0 5px 18px rgba(0,0,0,.055);
+}
+
+/* SERVICE HEADINGS */
+
+.enfield-service-card h3 {
+  margin: 0 0 11px;
+  color: var(--brand-black);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+/* SERVICE DESCRIPTIONS */
+
+.enfield-service-card p {
+  margin: 0 0 22px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* QUOTE BUTTON */
+
+.enfield-service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  width: 100%;
+  min-height: 43px;
+  margin-top: auto;
+  padding: 10px 14px;
+
+  background: var(--brand-blue);
+  color: #fff;
+
+  border: 1px solid var(--brand-blue);
+  border-radius: 5px;
+
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
+  text-decoration: none;
+
+  transition: background .2s ease;
+}
+
+.enfield-service-btn:hover {
+  background: #294761;
+  color: #fff;
+}
+
+.enfield-service-btn span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.enfield-service-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .enfield-services {
+    padding: 60px 0;
+  }
+
+  .enfield-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .enfield-services {
+    padding: 52px 0 58px;
+  }
+
+  .enfield-services-heading {
+    margin-bottom: 26px;
+  }
+
+  .enfield-services-heading h2 {
+    font-size: 27px;
+  }
+
+  .enfield-services-heading p {
+    font-size: 14px;
+  }
+
+  .enfield-services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .enfield-service-card {
+    padding: 21px 19px 19px;
+  }
+
+  .enfield-service-card h3 {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .enfield-service-card p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .enfield-service-btn {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enfield-service-card,
+  .enfield-service-btn {
+    transition: none;
+  }
+}
