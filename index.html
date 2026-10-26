@@ -345,6 +345,109 @@
     </div>
   </section>
 
+
+
+  
+<section class="cbp-planner" id="concrete-base-planner">
+  <div class="cbp-container">
+
+    <div class="cbp-heading">
+      <span class="cbp-eyebrow">FREE PROJECT TOOL</span>
+      <h2>Concrete Base Project Planner</h2>
+      <p>
+        Get an instant overview of your concrete base project.
+        No calls, forms or contact details required.
+      </p>
+    </div>
+
+    <div class="cbp-panel">
+
+      <div class="cbp-form">
+
+        <div class="cbp-field-row">
+          <div class="cbp-field">
+            <label for="cbp-length">Length (metres)</label>
+            <input
+              id="cbp-length"
+              type="number"
+              min="0.1"
+              max="100"
+              step="0.1"
+              placeholder="e.g. 4"
+            >
+          </div>
+
+          <div class="cbp-field">
+            <label for="cbp-width">Width (metres)</label>
+            <input
+              id="cbp-width"
+              type="number"
+              min="0.1"
+              max="100"
+              step="0.1"
+              placeholder="e.g. 3"
+            >
+          </div>
+        </div>
+
+        <div class="cbp-field">
+          <label for="cbp-ground">Ground Conditions</label>
+          <select id="cbp-ground">
+            <option value="level">Level Ground</option>
+            <option value="uneven">Uneven / Sloping Ground</option>
+            <option value="soft">Soft / Uncertain Ground</option>
+          </select>
+        </div>
+
+        <div class="cbp-field">
+          <label for="cbp-structure">Structure Going On Top</label>
+          <select id="cbp-structure">
+            <option value="shed">Garden Shed</option>
+            <option value="cabin">Garden Room / Log Cabin</option>
+            <option value="garage">Garage / Workshop</option>
+            <option value="commercial">Commercial / Industrial Structure</option>
+            <option value="other">Other Structure</option>
+          </select>
+        </div>
+
+        <div class="cbp-field">
+          <label for="cbp-access">Garden / Site Access</label>
+          <select id="cbp-access">
+            <option value="clear">Clear Side Access</option>
+            <option value="narrow">Narrow Access / Steps / Obstacles</option>
+            <option value="house">Access Through Property</option>
+            <option value="open">Open Site / Machinery Access</option>
+          </select>
+        </div>
+
+        <button
+          type="button"
+          class="cbp-submit"
+          id="cbp-calculate"
+        >
+          View My Project Overview
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="cbp-form-note">
+          Instant results. No personal information needed.
+        </p>
+
+      </div>
+
+      <div
+        class="cbp-results"
+        id="cbp-results"
+        hidden
+        aria-live="polite"
+      ></div>
+
+    </div>
+
+  </div>
+</section>
+
+
     <!-- =========================================
        OUR CONCRETE ENFIELD SERVICES
   ========================================= -->
@@ -876,5 +979,6 @@ bookings.pillar@gmail.com
     📞 <span>Call For A Free Estimate</span>
 </a>
 <script src="/nav.js"></script>
+<script src="/tool.js"></script>
 </body>
 </html>
